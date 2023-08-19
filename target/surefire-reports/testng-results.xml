@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-19T05:04:32Z" name="Surefire suite" finished-at="2023-08-19T05:04:39Z" duration-ms="6722">
+    <groups>
+    </groups>
+    <test started-at="2023-08-19T05:04:32Z" name="Surefire test" finished-at="2023-08-19T05:04:39Z" duration-ms="6722">
+      <class name="com.orangehrm.runner.TestRunner">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.orangehrm.runner.TestRunner@4c40b76e]" started-at="2023-08-19T05:04:32Z" name="beforeClass" finished-at="2023-08-19T05:04:34Z" duration-ms="2437" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="isLogoVisible()[pri:0, instance:com.orangehrm.runner.TestRunner@4c40b76e]" started-at="2023-08-19T05:04:34Z" name="isLogoVisible" finished-at="2023-08-19T05:04:34Z" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isLogoVisible -->
+        <test-method signature="isLogoVisible1()[pri:0, instance:com.orangehrm.runner.TestRunner@4c40b76e]" started-at="2023-08-19T05:04:34Z" name="isLogoVisible1" finished-at="2023-08-19T05:04:34Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isLogoVisible1 -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.orangehrm.runner.TestRunner@4c40b76e]" started-at="2023-08-19T05:04:34Z" name="afterTest" finished-at="2023-08-19T05:04:39Z" duration-ms="4258" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.orangehrm.runner.TestRunner -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <!-- Define the root logger -->
+    <root>
+        <priority value="DEBUG" />
+        <appender-ref ref="consoleAppender" />
+    </root>
+
+    <!-- Define the console appender -->
+    <appender name="consoleAppender" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d [%t] %-5p %c{1} - %m%n" />
+        </layout>
+    </appender>
+</log4j:configuration>
+In this example:
+
+The <root> element defines the root logger, which captures all log messages.
+
+The <priority> element sets the log level to "DEBUG," which means it captures messages at the DEBUG level and above.
+
+The <appender-ref> element specifies that log messages should be sent to the "consoleAppender."
+
+The <appender> element defines the "consoleAppender" appender, which sends log messages to the console.
+
+The <param> element with the name "Target" specifies that the appender should target "System.out" (standard output).
+
+The <layout> element specifies the layout of log messages.
+
+The <param> element within the layout element sets the log message format using the %d, %t, %p, %c, and %m placeholders.
+
+You can customize this log4j.xml configuration to suit your specific logging needs. You can add more appenders, change log levels, specify different output targets (e.g., files, databases), and adjust the log message format according to your requirements.
+
+
+
+
+
