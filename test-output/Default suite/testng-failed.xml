@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.orangehrm.runner.TestRunner">
+      <class name="com.omrbranch.runner.TestRunner">
         <methods>
           <include name="beforeClass"/>
-          <include name="isLogoVisible"/>
+          <include name="beforeMethod"/>
+          <include name="isLogoVisible" invocation-numbers="0"/>
           <include name="afterTest"/>
-          <include name="isLogoVisible1"/>
         </methods>
-      </class> <!-- com.orangehrm.runner.TestRunner -->
+      </class> <!-- com.omrbranch.runner.TestRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,9 +1,9 @@
-package com.orangehrm.sample;
+package com.omrbranch.sample;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import com.orangehrm.lib.BaseClass;
+import com.omrbranch.lib.BaseClass;
 
 public class Testing  extends BaseClass {
 public static void main(String[] args) throws FileNotFoundException, IOException {
