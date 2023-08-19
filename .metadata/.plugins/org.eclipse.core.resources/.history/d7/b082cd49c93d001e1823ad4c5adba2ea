@@ -1,0 +1,44 @@
+package com.orangehrm.lib;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+
+/**
+ * The {<code></code>
+ * Date : 18-08-2023
+ * @author  Mayusri
+ * The {@code Properties} class is repsented 
+ * 
+ */
+public class BaseClass {
+
+		private static WebDriver driver;
+		
+		/**
+		 * This method returns path of the current working directory
+		 * @return string of current directory.
+		 */
+		private String getCurrentWorkingDirPath() {
+			return System.getProperty("user.dir");
+		}
+		 
+		
+		/**
+		 *  Use this method to get value from configuration file 
+		 * @param key  - which is presented in configuration file.
+		 * @return  value of specified key
+		 * @throws FileNotFoundException
+		 * @throws IOException
+		 */
+		public String getValueFrmPropertyFile(String key) throws FileNotFoundException, IOException {
+			Properties properties =  new Properties();
+			properties.load(new FileInputStream(new File(getCurrentWorkingDirPath()+"\\src\\test\\resources\\configuration\\config.properties")));
+			return properties.getProperty(key);
+		}
+		
+}

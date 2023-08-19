@@ -1,0 +1,6 @@
+package com.orangehrm.lib;
+
+public class BaseClass {
+
+	
+}

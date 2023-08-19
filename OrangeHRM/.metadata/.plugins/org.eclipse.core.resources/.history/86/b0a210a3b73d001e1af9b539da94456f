@@ -1,0 +1,15 @@
+package com.orangehrm.lib;
+
+import org.openqa.selenium.WebDriver;
+
+public class BaseClass {
+
+		private static WebDriver driver;
+		
+		private String getCurrentWorkingDirPath() {
+			return System.getProperty("user.dir");
+		}
+		
+		
+		
+}

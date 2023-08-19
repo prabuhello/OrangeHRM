@@ -1,0 +1,25 @@
+package com.orangehrm.lib;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+
+public class BaseClass {
+
+		private static WebDriver driver;
+		
+		private String getCurrentWorkingDirPath() {
+			return System.getProperty("user.dir");
+		}
+		
+		public String getValueFrmPropertyFile(String key) throws FileNotFoundException, IOException {
+			Properties properties =  new Properties();
+			properties.load(new FileInputStream(new File(getCurrentWorkingDirPath()+"\\src\\test\\resources\\configuration\\config.properties")));
+			return properties.getProperty(key);
+		}
+		
+}

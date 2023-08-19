@@ -1,0 +1,39 @@
+package com.orangehrm.runner;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.orangehrm.lib.BaseClass;
+
+public class TestRunner extends BaseClass {
+	
+	@BeforeTest
+	public void beforeTest() throws FileNotFoundException, IOException {
+		launchBrower();
+		maximizeWindow();
+		System.out.println("Launch Browser");
+	}
+	
+	@Test
+	public void  isLogoVisible() {
+			
+	}
+	
+	
+	@Test
+	public void  isLogoVisible1() {
+			
+	}
+	
+	@AfterTest
+	public void afterTest() {
+			quitBrowser();
+	}
+
+}

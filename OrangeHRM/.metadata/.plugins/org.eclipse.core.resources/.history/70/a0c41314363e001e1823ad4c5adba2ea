@@ -1,0 +1,26 @@
+package com.orangehrm.sample;
+
+public class MyApp {
+    private static final Logger logger = Logger.getLogger(MyApp.class);
+    
+    public static void main(String[] args) {
+        PropertyConfigurator.configure("path/to/your/log4j.xml");
+        
+        // Log messages at different levels
+        logger.debug("This is a debug message.");
+        logger.info("This is an info message.");
+        logger.warn("This is a warning message.");
+        logger.error("This is an error message.");
+    }
+}
+Run Your Application:
+
+When you run your application, Log4j will create the log file (e.g., myapp.log) and write log messages according to the configuration you defined.
+
+Make sure to adjust the configuration and log levels in your log4j.xml file to suit your specific logging requirements. Additionally, handle any exceptions related to Log4j initialization properly in your application.
+
+
+
+
+
+
