@@ -1,4 +1,4 @@
-package com.orangehrm.lib;
+package com.omrbranch.lib;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -9,8 +9,11 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriver.Options;
 import org.openqa.selenium.WebDriver.Window;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,16 +25,15 @@ import io.github.bonigarcia.wdm.WebDriverManager;
  * @author Mayusri The {@code Properties} class is repsented
  * 
  */
-public class BaseClass {
+public class BaseClass implements Usable {
 
 	private static WebDriver driver;
     private static final Logger logger = LoggerFactory.getLogger(BaseClass.class);
 	/**
 	 * This method returns path of the current working directory
-	 * 
 	 * @return string of current directory.
 	 */
-	private String getCurrentWorkingDirPath() {
+	public String getCurrentWorkingDirPath() {
 		return System.getProperty("user.dir");
 	}
 
@@ -43,7 +45,6 @@ public class BaseClass {
 	 * @throws IOException
 	 */
 	public String getValueFrmPropertyFile(String key) throws FileNotFoundException, IOException {
-		
 		Properties properties = new Properties();
 		properties.load(new FileInputStream(
 				new File(getCurrentWorkingDirPath() + "\\src\\test\\resources\\configuration\\config.properties")));
@@ -52,6 +53,7 @@ public class BaseClass {
 		return value;
 	}
 
+	
 	/**
 	 * Use this method to wait the execution specified time
 	 */
@@ -64,6 +66,7 @@ public class BaseClass {
 		}
 	}
 
+	
 	/**
 	 * Use this method to close the current driver session
 	 */
@@ -96,6 +99,7 @@ public class BaseClass {
 		logger.info(browser+ " is launched successfully.");
 	}
 	
+	
 	/**
 	 * Use this method to maximize the current window
 	 */
@@ -114,4 +118,28 @@ public class BaseClass {
 	public void gotoUrl(String url) {
 		driver.get(url);
 	}
+	
+	
+	/**
+	 * Use this method to check availability of the element
+	 * @param element
+	 * @return 
+	 */
+	public WebElement isAvailabe(WebElement element) {
+		return  new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(element));
+	}
+
+	/**
+	 *
+	 */
+	@Override
+	public boolean isDisplay(WebElement element) {
+		return element.isDisplayed();
+	}
+
+	@Override
+	public WebDriver getDriver() {
+		return driver;
+	}
+
 }

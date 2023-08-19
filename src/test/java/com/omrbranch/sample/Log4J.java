@@ -1,9 +1,9 @@
-package com.orangehrm.sample;
+package com.omrbranch.sample;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.orangehrm.lib.BaseClass;
+import com.omrbranch.lib.BaseClass;
 
 public class Log4J {
     private static final Logger logger = LoggerFactory.getLogger(BaseClass.class);
