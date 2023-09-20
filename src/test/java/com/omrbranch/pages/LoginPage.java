@@ -12,8 +12,10 @@ public class LoginPage extends BaseClass {
 		PageFactory.initElements(getDriver(), this);
 	}
 	
+
+
 	/**
-	* New thing 
+	* New thing aaa
 	*/
 	
 	@FindBy( css = "[data-testid=omrlogo]")
